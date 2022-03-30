@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: humanresources
+    tables:
+      - name: employee
+        columns:
+          - name: gender
+            tests:
+                - not_null

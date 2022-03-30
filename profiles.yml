@@ -1,0 +1,48 @@
+adventure_works:
+    target: staging
+    outputs:
+      staging:
+        type: postgres
+
+        threads: 4
+
+        # Set the TEST_DATABASE in your CI
+        dbname: "Adventureworks"
+        schema: "staging"
+
+        # Set variable DBT_USER in your CI
+        user: "{{ env_var('DBT_USER') }}"
+
+        # Set variable DBT_PASSWORD in your CI
+        password: "{{ env_var('DBT_PASSWORD') }}"
+
+        # Set variable DBT_REDSHIFT_ACCOUNT in your CI
+        host: "127.0.0.1" # We use ssh tunnel for CI 
+
+        port: 5439
+        keepalives_idle: 0 # default 0, indicating the system default
+        # search_path: public # optional, not recommended
+        # sslmode: [optional, set the sslmode used to connect to the database (in case this parameter is set, will look for ca in ~/.postgresql/root.crt)]
+
+      production:
+        type: postgres
+
+        threads: 4
+
+        # Set the TEST_DATABASE in your CI
+        dbname: "Adventureworks"
+        schema: "production"
+
+        # Set variable DBT_USER in your CI
+        user: "{{ env_var('DBT_USER') }}"
+
+        # Set variable DBT_PASSWORD in your CI
+        password: "{{ env_var('DBT_PASSWORD') }}"
+
+        # Set variable DBT_REDSHIFT_ACCOUNT in your CI
+        host: "35.239.223.162" # We use ssh tunnel for CI 
+
+        port: 5432
+        keepalives_idle: 0 # default 0, indicating the system default
+        # search_path: public # optional, not recommended
+        # sslmode: [optional, set the sslmode used to connect to the database (in case this parameter is set, will look for ca in ~/.postgresql/root.crt)]
