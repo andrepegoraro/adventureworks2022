@@ -1,6 +1,8 @@
 
-  create view "Adventureworks"."humanresources"."stg_humanresources_employee__dbt_tmp" as (
-    with source_data as(
+
+  create or replace view `big-query-poggers`.`humanresources`.`stg_humanresources_employee`
+  OPTIONS()
+  as with source_data as(
     SELECT
     businessentityid
     ,nationalidnumber
@@ -15,8 +17,8 @@
     ,currentflag
 
 
-    from "Adventureworks"."humanresources"."employee"
+    from `big-query-poggers`.`humanresources`.`employee`
 )
 
-select * from source_data
-  );
+select * from source_data;
+

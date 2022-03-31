@@ -13,7 +13,7 @@ with source_data as(
     ,currentflag
 
 
-    from "Adventureworks"."humanresources"."employee"
+    from `big-query-poggers`.`humanresources`.`employee`
 )
 
 select * from source_data

@@ -3,8 +3,11 @@ version: 2
 sources:
   - name: humanresources
     tables:
+      - name: humanresources_department
+      - name: shift
+      - name: jobcandidate
+      - name: employeepayhistory
+      - name: employeedepartmenthistory
       - name: employee
-        columns:
-          - name: gender
-            tests:
-                - not_null
+      - name: department
+
