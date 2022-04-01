@@ -1,13 +1,10 @@
 version: 2
 
 sources:
-  - name: humanresources
+  - name: raw_normalized_adventureworks
     tables:
-      - name: humanresources_department
-      - name: shift
-      - name: jobcandidate
-      - name: employeepayhistory
-      - name: employeedepartmenthistory
-      - name: employee
-      - name: department
-
+      - name: normalized_department
+      - name: normalized_employee
+      - name: normalized_employeedepartmenthistory
+      - name: normalized_employeepayhistory
+      - name: normalized_shift

@@ -12,8 +12,7 @@ with source_data as(
     ,sickleavehours
     ,currentflag
 
-
-    from {{source('humanresources', 'employee')}}
+    from {{source('raw_normalized_adventureworks', 'normalized_employee')}}
 )
 
 select * from source_data

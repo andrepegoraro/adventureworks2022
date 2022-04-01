@@ -1,14 +1,25 @@
 adventure_works:
+  target: dbt_aw
   outputs:
-    dbt_aw_2022:
-      dataset: humanresources
+    raw_normalized_adventureworks:
+      dataset: raw_normalized_adventureworks
       fixed_retries: 1
-      keyfile: /home/pedro/.dbt/big-query-poggers-8d428dd1d855.json
+      keyfile: /home/pedro/.dbt/lighthouse-2022-8bf3a98e10fe.json
       location: us
       method: service-account
       priority: interactive
-      project: big-query-poggers
+      project: lighthouse-2022
       threads: 1
       timeout_seconds: 300
       type: bigquery
-  target: dbt_aw_2022
+    dbt_aw:
+      dataset: dbt_aw
+      fixed_retries: 1
+      keyfile: /home/pedro/.dbt/lighthouse-2022-8bf3a98e10fe.json
+      location: us
+      method: service-account
+      priority: interactive
+      project: lighthouse-2022
+      threads: 1
+      timeout_seconds: 300
+      type: bigquery

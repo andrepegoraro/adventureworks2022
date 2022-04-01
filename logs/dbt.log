@@ -1626,3 +1626,408 @@ select * from source_data;
 21:12:54.605186 [info ] [MainThread]: 
 21:12:54.605768 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 21:12:54.606279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f148498ed00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f14849886d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f14849884f0>]}
+
+
+============================== 2022-04-01 14:03:04.112922 | 9d220306-aaea-4b25-966f-80669775dcd1 ==============================
+14:03:04.112922 [info ] [MainThread]: Running with dbt=1.0.4
+14:03:04.134851 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/pedro/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+14:03:04.135068 [debug] [MainThread]: Tracking: tracking
+14:03:04.175377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febb0a5d370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febb0a5d280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febb0a5d2e0>]}
+14:03:04.228850 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+14:03:04.229299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9d220306-aaea-4b25-966f-80669775dcd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febb0a66a30>]}
+14:03:04.257812 [debug] [MainThread]: Parsing macros/adapters.sql
+14:03:04.307884 [debug] [MainThread]: Parsing macros/catalog.sql
+14:03:04.314205 [debug] [MainThread]: Parsing macros/etc.sql
+14:03:04.316120 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+14:03:04.318663 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+14:03:04.321023 [debug] [MainThread]: Parsing macros/materializations/view.sql
+14:03:04.323286 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+14:03:04.324813 [debug] [MainThread]: Parsing macros/materializations/table.sql
+14:03:04.328174 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+14:03:04.340692 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+14:03:04.341288 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+14:03:04.342446 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+14:03:04.343049 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+14:03:04.343783 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+14:03:04.345751 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+14:03:04.353743 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+14:03:04.356211 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+14:03:04.359895 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+14:03:04.365914 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+14:03:04.374221 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+14:03:04.376562 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+14:03:04.383543 [debug] [MainThread]: Parsing macros/etc/statement.sql
+14:03:04.387332 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+14:03:04.388674 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+14:03:04.390737 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+14:03:04.392060 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+14:03:04.395395 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+14:03:04.397406 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+14:03:04.406899 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+14:03:04.408363 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+14:03:04.417904 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+14:03:04.431880 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+14:03:04.433569 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+14:03:04.435242 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+14:03:04.439043 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+14:03:04.443962 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+14:03:04.457534 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+14:03:04.470280 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+14:03:04.471629 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+14:03:04.480784 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+14:03:04.484550 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+14:03:04.493173 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+14:03:04.499269 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+14:03:04.501738 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+14:03:04.503960 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+14:03:04.505105 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+14:03:04.510899 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+14:03:04.512971 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+14:03:04.702445 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_humanresources_employee.sql
+14:03:04.737836 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.adventure_works.example
+
+14:03:04.741939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9d220306-aaea-4b25-966f-80669775dcd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febacef5490>]}
+14:03:04.753632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9d220306-aaea-4b25-966f-80669775dcd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febacef52b0>]}
+14:03:04.753970 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics
+14:03:04.755147 [info ] [MainThread]: 
+14:03:04.755650 [debug] [MainThread]: Acquiring new bigquery connection "master"
+14:03:04.756371 [debug] [ThreadPool]: Acquiring new bigquery connection "list_big-query-poggers"
+14:03:04.756577 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:03:05.648295 [debug] [ThreadPool]: Acquiring new bigquery connection "list_big-query-poggers_humanresources"
+14:03:05.648507 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:03:06.296947 [info ] [MainThread]: Concurrency: 1 threads (target='dbt_aw_2022')
+14:03:06.299536 [info ] [MainThread]: 
+14:03:06.305824 [debug] [Thread-1  ]: Began running node model.adventure_works.stg_humanresources_employee
+14:03:06.306593 [info ] [Thread-1  ]: 1 of 1 START view model humanresources.stg_humanresources_employee.............. [RUN]
+14:03:06.307664 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.adventure_works.stg_humanresources_employee"
+14:03:06.308038 [debug] [Thread-1  ]: Began compiling node model.adventure_works.stg_humanresources_employee
+14:03:06.308477 [debug] [Thread-1  ]: Compiling model.adventure_works.stg_humanresources_employee
+14:03:06.316780 [debug] [Thread-1  ]: Writing injected SQL for node "model.adventure_works.stg_humanresources_employee"
+14:03:06.317589 [debug] [Thread-1  ]: finished collecting timing info
+14:03:06.317997 [debug] [Thread-1  ]: Began executing node model.adventure_works.stg_humanresources_employee
+14:03:06.375210 [debug] [Thread-1  ]: Writing runtime SQL for node "model.adventure_works.stg_humanresources_employee"
+14:03:06.375884 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:03:06.377626 [debug] [Thread-1  ]: On model.adventure_works.stg_humanresources_employee: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "adventure_works", "target_name": "dbt_aw_2022", "node_id": "model.adventure_works.stg_humanresources_employee"} */
+
+
+  create or replace view `big-query-poggers`.`humanresources`.`stg_humanresources_employee`
+  OPTIONS()
+  as with source_data as(
+    SELECT
+    businessentityid
+    ,nationalidnumber
+    ,jobtitle
+    ,birthdate
+    ,maritalstatus
+    ,gender
+    ,hiredate
+    ,salariedflag
+    ,vacationhours
+    ,sickleavehours
+    ,currentflag
+
+    from `big-query-poggers`.`raw_normalized_adventureworks`.`normalized_employee`
+)
+
+select * from source_data;
+
+
+14:03:07.153017 [debug] [Thread-1  ]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "adventure_works", "target_name": "dbt_aw_2022", "node_id": "model.adventure_works.stg_humanresources_employee"} */
+
+
+  create or replace view `big-query-poggers`.`humanresources`.`stg_humanresources_employee`
+  OPTIONS()
+  as with source_data as(
+    SELECT
+    businessentityid
+    ,nationalidnumber
+    ,jobtitle
+    ,birthdate
+    ,maritalstatus
+    ,gender
+    ,hiredate
+    ,salariedflag
+    ,vacationhours
+    ,sickleavehours
+    ,currentflag
+
+    from `big-query-poggers`.`raw_normalized_adventureworks`.`normalized_employee`
+)
+
+select * from source_data;
+
+
+14:03:07.153231 [debug] [Thread-1  ]: BigQuery adapter: 404 Not found: Dataset big-query-poggers:raw_normalized_adventureworks was not found in location US
+
+Location: US
+Job ID: 47a43461-669b-4261-b93c-bf5782c1cc78
+
+14:03:07.153498 [debug] [Thread-1  ]: finished collecting timing info
+14:03:07.153783 [debug] [Thread-1  ]: Runtime Error in model stg_humanresources_employee (models/staging/stg_humanresources_employee.sql)
+  404 Not found: Dataset big-query-poggers:raw_normalized_adventureworks was not found in location US
+  
+  Location: US
+  Job ID: 47a43461-669b-4261-b93c-bf5782c1cc78
+  
+14:03:07.154025 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9d220306-aaea-4b25-966f-80669775dcd1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febac5a3fd0>]}
+14:03:07.154306 [error] [Thread-1  ]: 1 of 1 ERROR creating view model humanresources.stg_humanresources_employee..... [[31mERROR[0m in 0.85s]
+14:03:07.154610 [debug] [Thread-1  ]: Finished running node model.adventure_works.stg_humanresources_employee
+14:03:07.155727 [debug] [MainThread]: Acquiring new bigquery connection "master"
+14:03:07.156065 [info ] [MainThread]: 
+14:03:07.156352 [info ] [MainThread]: Finished running 1 view model in 2.40s.
+14:03:07.156604 [debug] [MainThread]: Connection 'master' was properly closed.
+14:03:07.156735 [debug] [MainThread]: Connection 'model.adventure_works.stg_humanresources_employee' was properly closed.
+14:03:07.160462 [info ] [MainThread]: 
+14:03:07.160757 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+14:03:07.161018 [info ] [MainThread]: 
+14:03:07.161253 [error] [MainThread]: [33mRuntime Error in model stg_humanresources_employee (models/staging/stg_humanresources_employee.sql)[0m
+14:03:07.161477 [error] [MainThread]:   404 Not found: Dataset big-query-poggers:raw_normalized_adventureworks was not found in location US
+14:03:07.161834 [error] [MainThread]:   
+14:03:07.162102 [error] [MainThread]:   Location: US
+14:03:07.162432 [error] [MainThread]:   Job ID: 47a43461-669b-4261-b93c-bf5782c1cc78
+14:03:07.162786 [error] [MainThread]:   
+14:03:07.163051 [info ] [MainThread]: 
+14:03:07.163438 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+14:03:07.164360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febb09d8fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febb09d8910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febacf0f460>]}
+
+
+============================== 2022-04-01 14:03:32.137435 | ec484a96-f78b-4b02-9e35-e98e755dc179 ==============================
+14:03:32.137435 [info ] [MainThread]: Running with dbt=1.0.4
+14:03:32.137942 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/pedro/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+14:03:32.138137 [debug] [MainThread]: Tracking: tracking
+14:03:32.146206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91e0940250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91e0940160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91e09401f0>]}
+14:03:32.170416 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+14:03:32.170649 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+14:03:32.170989 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.adventure_works.example
+
+14:03:32.175743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ec484a96-f78b-4b02-9e35-e98e755dc179', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91dda7dd90>]}
+14:03:32.180789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ec484a96-f78b-4b02-9e35-e98e755dc179', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91e08a39a0>]}
+14:03:32.181125 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics
+14:03:32.182461 [info ] [MainThread]: 
+14:03:32.183014 [debug] [MainThread]: Acquiring new bigquery connection "master"
+14:03:32.183864 [debug] [ThreadPool]: Acquiring new bigquery connection "list_big-query-poggers"
+14:03:32.184236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:03:32.842316 [debug] [ThreadPool]: Acquiring new bigquery connection "list_big-query-poggers_humanresources"
+14:03:32.842627 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:03:33.602166 [info ] [MainThread]: Concurrency: 1 threads (target='dbt_aw_2022')
+14:03:33.602488 [info ] [MainThread]: 
+14:03:33.604915 [debug] [Thread-1  ]: Began running node model.adventure_works.stg_humanresources_employee
+14:03:33.605233 [info ] [Thread-1  ]: 1 of 1 START view model humanresources.stg_humanresources_employee.............. [RUN]
+14:03:33.605702 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.adventure_works.stg_humanresources_employee"
+14:03:33.605869 [debug] [Thread-1  ]: Began compiling node model.adventure_works.stg_humanresources_employee
+14:03:33.606035 [debug] [Thread-1  ]: Compiling model.adventure_works.stg_humanresources_employee
+14:03:33.608565 [debug] [Thread-1  ]: Writing injected SQL for node "model.adventure_works.stg_humanresources_employee"
+14:03:33.609011 [debug] [Thread-1  ]: finished collecting timing info
+14:03:33.609266 [debug] [Thread-1  ]: Began executing node model.adventure_works.stg_humanresources_employee
+14:03:33.634830 [debug] [Thread-1  ]: Writing runtime SQL for node "model.adventure_works.stg_humanresources_employee"
+14:03:33.635216 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:03:33.636259 [debug] [Thread-1  ]: On model.adventure_works.stg_humanresources_employee: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "adventure_works", "target_name": "dbt_aw_2022", "node_id": "model.adventure_works.stg_humanresources_employee"} */
+
+
+  create or replace view `big-query-poggers`.`humanresources`.`stg_humanresources_employee`
+  OPTIONS()
+  as with source_data as(
+    SELECT
+    businessentityid
+    ,nationalidnumber
+    ,jobtitle
+    ,birthdate
+    ,maritalstatus
+    ,gender
+    ,hiredate
+    ,salariedflag
+    ,vacationhours
+    ,sickleavehours
+    ,currentflag
+
+    from `big-query-poggers`.`raw_normalized_adventureworks`.`normalized_employee`
+)
+
+select * from source_data;
+
+
+14:03:34.297173 [debug] [Thread-1  ]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "adventure_works", "target_name": "dbt_aw_2022", "node_id": "model.adventure_works.stg_humanresources_employee"} */
+
+
+  create or replace view `big-query-poggers`.`humanresources`.`stg_humanresources_employee`
+  OPTIONS()
+  as with source_data as(
+    SELECT
+    businessentityid
+    ,nationalidnumber
+    ,jobtitle
+    ,birthdate
+    ,maritalstatus
+    ,gender
+    ,hiredate
+    ,salariedflag
+    ,vacationhours
+    ,sickleavehours
+    ,currentflag
+
+    from `big-query-poggers`.`raw_normalized_adventureworks`.`normalized_employee`
+)
+
+select * from source_data;
+
+
+14:03:34.297379 [debug] [Thread-1  ]: BigQuery adapter: 404 Not found: Dataset big-query-poggers:raw_normalized_adventureworks was not found in location US
+
+Location: US
+Job ID: bd15f899-0d1f-43aa-ad61-fffe052a0bd7
+
+14:03:34.297654 [debug] [Thread-1  ]: finished collecting timing info
+14:03:34.297943 [debug] [Thread-1  ]: Runtime Error in model stg_humanresources_employee (models/staging/stg_humanresources_employee.sql)
+  404 Not found: Dataset big-query-poggers:raw_normalized_adventureworks was not found in location US
+  
+  Location: US
+  Job ID: bd15f899-0d1f-43aa-ad61-fffe052a0bd7
+  
+14:03:34.298187 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec484a96-f78b-4b02-9e35-e98e755dc179', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91dc13a730>]}
+14:03:34.298476 [error] [Thread-1  ]: 1 of 1 ERROR creating view model humanresources.stg_humanresources_employee..... [[31mERROR[0m in 0.69s]
+14:03:34.298780 [debug] [Thread-1  ]: Finished running node model.adventure_works.stg_humanresources_employee
+14:03:34.299896 [debug] [MainThread]: Acquiring new bigquery connection "master"
+14:03:34.300232 [info ] [MainThread]: 
+14:03:34.300509 [info ] [MainThread]: Finished running 1 view model in 2.12s.
+14:03:34.300753 [debug] [MainThread]: Connection 'master' was properly closed.
+14:03:34.300884 [debug] [MainThread]: Connection 'model.adventure_works.stg_humanresources_employee' was properly closed.
+14:03:34.306333 [info ] [MainThread]: 
+14:03:34.306756 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+14:03:34.307921 [info ] [MainThread]: 
+14:03:34.308442 [error] [MainThread]: [33mRuntime Error in model stg_humanresources_employee (models/staging/stg_humanresources_employee.sql)[0m
+14:03:34.308822 [error] [MainThread]:   404 Not found: Dataset big-query-poggers:raw_normalized_adventureworks was not found in location US
+14:03:34.309202 [error] [MainThread]:   
+14:03:34.309592 [error] [MainThread]:   Location: US
+14:03:34.309946 [error] [MainThread]:   Job ID: bd15f899-0d1f-43aa-ad61-fffe052a0bd7
+14:03:34.310313 [error] [MainThread]:   
+14:03:34.311212 [info ] [MainThread]: 
+14:03:34.311588 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+14:03:34.311924 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91dd207bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91dd169a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f91dd1696a0>]}
+
+
+============================== 2022-04-01 14:04:12.792736 | 4736c4fc-2037-44e7-a096-294fe4746cf3 ==============================
+14:04:12.792736 [info ] [MainThread]: Running with dbt=1.0.4
+14:04:12.793271 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/home/pedro/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+14:04:12.793479 [debug] [MainThread]: Tracking: tracking
+14:04:12.801291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06dc84be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06dc84c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06dc84c40>]}
+14:04:12.816313 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+14:04:12.816635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4736c4fc-2037-44e7-a096-294fe4746cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06dcac4c0>]}
+14:04:12.825305 [debug] [MainThread]: Parsing macros/adapters.sql
+14:04:12.845716 [debug] [MainThread]: Parsing macros/catalog.sql
+14:04:12.850646 [debug] [MainThread]: Parsing macros/etc.sql
+14:04:12.852264 [debug] [MainThread]: Parsing macros/materializations/seed.sql
+14:04:12.854417 [debug] [MainThread]: Parsing macros/materializations/copy.sql
+14:04:12.856669 [debug] [MainThread]: Parsing macros/materializations/view.sql
+14:04:12.858812 [debug] [MainThread]: Parsing macros/materializations/snapshot.sql
+14:04:12.860211 [debug] [MainThread]: Parsing macros/materializations/table.sql
+14:04:12.863591 [debug] [MainThread]: Parsing macros/materializations/incremental.sql
+14:04:12.876142 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+14:04:12.876758 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+14:04:12.877925 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+14:04:12.878523 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+14:04:12.879245 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+14:04:12.881086 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+14:04:12.889078 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+14:04:12.891558 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+14:04:12.895208 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+14:04:12.901204 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+14:04:12.909495 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+14:04:12.911879 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+14:04:12.918938 [debug] [MainThread]: Parsing macros/etc/statement.sql
+14:04:12.922597 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+14:04:12.923920 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+14:04:12.925999 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+14:04:12.927319 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+14:04:12.930539 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+14:04:12.932577 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+14:04:12.941923 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+14:04:12.943348 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+14:04:12.952988 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+14:04:12.967014 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+14:04:12.968573 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+14:04:12.970102 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+14:04:12.973792 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+14:04:12.978770 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+14:04:12.992334 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+14:04:13.005144 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+14:04:13.006474 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+14:04:13.015713 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+14:04:13.019456 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+14:04:13.028149 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+14:04:13.034286 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+14:04:13.036829 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+14:04:13.039037 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+14:04:13.040129 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+14:04:13.045927 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+14:04:13.047966 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+14:04:13.221823 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_humanresources_employee.sql
+14:04:13.256033 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.adventure_works.example
+
+14:04:13.260053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4736c4fc-2037-44e7-a096-294fe4746cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06a354e20>]}
+14:04:13.265287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4736c4fc-2037-44e7-a096-294fe4746cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06a354be0>]}
+14:04:13.265568 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 5 sources, 0 exposures, 0 metrics
+14:04:13.266756 [info ] [MainThread]: 
+14:04:13.267252 [debug] [MainThread]: Acquiring new bigquery connection "master"
+14:04:13.267937 [debug] [ThreadPool]: Acquiring new bigquery connection "list_lighthouse-2022"
+14:04:13.268126 [debug] [ThreadPool]: Opening a new connection, currently in state init
+14:04:13.896524 [debug] [ThreadPool]: Acquiring new bigquery connection "list_lighthouse-2022_dbt_aw"
+14:04:13.896746 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+14:04:14.555231 [info ] [MainThread]: Concurrency: 1 threads (target='dbt_aw')
+14:04:14.555633 [info ] [MainThread]: 
+14:04:14.558576 [debug] [Thread-1  ]: Began running node model.adventure_works.stg_humanresources_employee
+14:04:14.558945 [info ] [Thread-1  ]: 1 of 1 START view model dbt_aw.stg_humanresources_employee...................... [RUN]
+14:04:14.559738 [debug] [Thread-1  ]: Acquiring new bigquery connection "model.adventure_works.stg_humanresources_employee"
+14:04:14.559936 [debug] [Thread-1  ]: Began compiling node model.adventure_works.stg_humanresources_employee
+14:04:14.560143 [debug] [Thread-1  ]: Compiling model.adventure_works.stg_humanresources_employee
+14:04:14.564068 [debug] [Thread-1  ]: Writing injected SQL for node "model.adventure_works.stg_humanresources_employee"
+14:04:14.564520 [debug] [Thread-1  ]: finished collecting timing info
+14:04:14.564744 [debug] [Thread-1  ]: Began executing node model.adventure_works.stg_humanresources_employee
+14:04:14.591763 [debug] [Thread-1  ]: Writing runtime SQL for node "model.adventure_works.stg_humanresources_employee"
+14:04:14.592162 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+14:04:14.593216 [debug] [Thread-1  ]: On model.adventure_works.stg_humanresources_employee: /* {"app": "dbt", "dbt_version": "1.0.4", "profile_name": "adventure_works", "target_name": "dbt_aw", "node_id": "model.adventure_works.stg_humanresources_employee"} */
+
+
+  create or replace view `lighthouse-2022`.`dbt_aw`.`stg_humanresources_employee`
+  OPTIONS()
+  as with source_data as(
+    SELECT
+    businessentityid
+    ,nationalidnumber
+    ,jobtitle
+    ,birthdate
+    ,maritalstatus
+    ,gender
+    ,hiredate
+    ,salariedflag
+    ,vacationhours
+    ,sickleavehours
+    ,currentflag
+
+    from `lighthouse-2022`.`raw_normalized_adventureworks`.`normalized_employee`
+)
+
+select * from source_data;
+
+
+14:04:15.865616 [debug] [Thread-1  ]: finished collecting timing info
+14:04:15.866350 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4736c4fc-2037-44e7-a096-294fe4746cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe068208ac0>]}
+14:04:15.866906 [info ] [Thread-1  ]: 1 of 1 OK created view model dbt_aw.stg_humanresources_employee................. [[32mOK[0m in 1.31s]
+14:04:15.867491 [debug] [Thread-1  ]: Finished running node model.adventure_works.stg_humanresources_employee
+14:04:15.869296 [debug] [MainThread]: Acquiring new bigquery connection "master"
+14:04:15.869868 [info ] [MainThread]: 
+14:04:15.870357 [info ] [MainThread]: Finished running 1 view model in 2.60s.
+14:04:15.870793 [debug] [MainThread]: Connection 'master' was properly closed.
+14:04:15.871028 [debug] [MainThread]: Connection 'model.adventure_works.stg_humanresources_employee' was properly closed.
+14:04:15.877809 [info ] [MainThread]: 
+14:04:15.878356 [info ] [MainThread]: [32mCompleted successfully[0m
+14:04:15.878896 [info ] [MainThread]: 
+14:04:15.879345 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+14:04:15.879897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06adafe80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06add2d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06add2d90>]}

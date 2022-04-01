@@ -1,6 +1,6 @@
 
 
-  create or replace view `big-query-poggers`.`humanresources`.`stg_humanresources_employee`
+  create or replace view `lighthouse-2022`.`dbt_aw`.`stg_humanresources_employee`
   OPTIONS()
   as with source_data as(
     SELECT
@@ -16,8 +16,7 @@
     ,sickleavehours
     ,currentflag
 
-
-    from `big-query-poggers`.`humanresources`.`employee`
+    from `lighthouse-2022`.`raw_normalized_adventureworks`.`normalized_employee`
 )
 
 select * from source_data;

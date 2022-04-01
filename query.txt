@@ -1,0 +1,52 @@
+DEPARTMENT
+
+SELECT
+    JSON_EXTRACT_SCALAR(_airbyte_data ,"$.departmentid") as departmentid
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.name") as name
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.groupname") as groupname
+FROM `lighthouse-2022.raw_adventureworks._airbyte_raw_raw_department`
+
+EMPLOYEES
+
+SELECT
+    JSON_EXTRACT_SCALAR(_airbyte_data ,"$.businessentityid") as businessentityid
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.nationalidnumber") as nationalidnumber
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.loginid") as loginid
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.jobtitle") as jobtitle
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.birthdate") as birthdate
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.maritalstatus") as maritalstatus
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.gender") as gender
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.hiredate") as hiredate
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.salariedflag") as salariedflag
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.vacationhours") as vacationhours
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.sickleavehours") as sickleavehours
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.currentflag") as currentflag
+FROM `lighthouse-2022.raw_adventureworks._airbyte_raw_raw_employee`
+
+employeedepartmenthistory
+
+SELECT
+    JSON_EXTRACT_SCALAR(_airbyte_data ,"$.businessentityid") as businessentityid
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.departmentid") as departmentid
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.shiftid") as shiftid
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.startdate") as startdate
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.enddate") as enddate
+FROM `lighthouse-2022.raw_adventureworks._airbyte_raw_raw_employeedepartmenthistory`
+
+employeepayhistory
+
+SELECT
+    JSON_EXTRACT_SCALAR(_airbyte_data ,"$.businessentityid") as businessentityid
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.ratechangedate") as ratechangedate
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.rate") as rate
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.payfrequency") as payfrequency
+FROM `lighthouse-2022.raw_adventureworks._airbyte_raw_raw_employeepayhistory`
+
+shift
+
+SELECT
+    JSON_EXTRACT_SCALAR(_airbyte_data ,"$.shiftid") as shiftid
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.name") as name
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.starttime") as starttime
+    , JSON_EXTRACT_SCALAR(_airbyte_data ,"$.endtime") as endtime
+FROM `lighthouse-2022.raw_adventureworks._airbyte_raw_raw_shift`

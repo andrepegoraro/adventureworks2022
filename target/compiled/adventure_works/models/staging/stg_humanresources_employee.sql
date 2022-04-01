@@ -12,8 +12,7 @@ with source_data as(
     ,sickleavehours
     ,currentflag
 
-
-    from `big-query-poggers`.`humanresources`.`employee`
+    from `lighthouse-2022`.`raw_normalized_adventureworks`.`normalized_employee`
 )
 
 select * from source_data
